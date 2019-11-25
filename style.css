@@ -1,6 +1,8 @@
 div {
-  display: flex;
-  flex-direction: row;
   height: 50px;
   width: 50px;
+}
+section {
+  display: flex;
+  flex-direction: row;
 }
