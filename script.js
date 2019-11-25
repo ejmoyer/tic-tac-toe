@@ -4,12 +4,20 @@ let players = ['X', 'O'];
 
 // as a player i want to see a grid so i can know the state of the game
 // make the grid and the divs reference one another
-for (let div in document.querySelectorAll("div")) {
-  document.querySelectorAll('div')[div].appendChild(document.createTextNode(grid[div]))
+let divs = document.querySelectorAll("div")
+for (let div in divs) {
+  divs[div].appendChild(document.createTextNode(grid[div]))
+  divs[div].addEventListener("click", event => {
+    // put an x or O with .replaceChild
+    divs[div].replaceChild(document.createTextNode(players[0]), divs[div].firstChild)
+    // remove the event listener so you cant click that one again
+  })
 }
 //make sure the grid works
 
 // as a player i want to click a square to place a marker
+
+
 // add an event listener for click
 // it adds a text node to the div
 // as a player i want to see who's turn it is to properly take turns
