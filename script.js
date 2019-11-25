@@ -4,9 +4,9 @@ let players = ['X', 'O'];
 
 // as a player i want to see a grid so i can know the state of the game
 // make the grid and the divs reference one another
-let divs = document.querySelectorAll("div")
+let divs = Array.from(document.querySelectorAll("div"))
 for (let div in divs) {
-  divs[div].appendChild(document.createTextNode(grid[div]))
+  divs[div].appendChild(document.createTextNode(""))
   divs[div].addEventListener("click", event => {
     // put an x or O with .replaceChild
     divs[div].replaceChild(document.createTextNode(players[0]), divs[div].firstChild)
