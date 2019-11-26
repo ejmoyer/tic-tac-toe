@@ -42,3 +42,6 @@ for (let div in divs) {
   })
   divs[div].addEventListener("click", symbolFunc);
 }
+document.querySelector("input").addEventListener("click", event => {
+document.location.reload(true)
+})
