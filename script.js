@@ -16,4 +16,12 @@ for (let div in divs) {
     divs[div].removeEventListener("click", symbolFunc);
   }
   divs[div].addEventListener("click", symbolFunc);
+
+  divs[div].addEventListener("click", event => {
+    if (counter % 2 != 0) {
+      document.querySelector("p").replaceChild(document.createTextNode(`Player 2's Turn`), document.querySelector('p').firstChild)
+  } else {
+      document.querySelector("p").replaceChild(document.createTextNode(`Player 1's Turn`), document.querySelector('p').firstChild)
+  }
+  })
 }
