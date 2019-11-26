@@ -1,8 +1,21 @@
 div {
   height: 50px;
   width: 50px;
+  text-align: center;
 }
 section {
   display: flex;
   flex-direction: row;
+}
+
+.one div {
+  border: 2px solid black;
+}
+
+.two div {
+  border: 2px solid black;
+}
+
+.three div {
+  border: 2px solid black;
 }
