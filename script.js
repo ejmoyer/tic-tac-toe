@@ -18,7 +18,7 @@ for (let div in divs) {
 
 })
 }
-removeEventListener(event);
+  divs[div].addEventListener("click", event => {
 }
 //make sure the grid works
 
