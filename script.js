@@ -29,9 +29,6 @@ window.addEventListener("load", event => {
 for (let div in divs) {
   divs[div].appendChild(document.createTextNode(""))
   const symbolFunc = event => {
-    if (String(grid[0] + grid[1] + grid[2]) == "XXX") {
-      console.log("winner");
-    }
     if (counter % 2 == 0) {
       divs[div].replaceChild(document.createTextNode(players[0]), divs[div].firstChild);
       grid[div] = players[0];
@@ -49,14 +46,20 @@ for (let div in divs) {
       (grid[3] + grid[4] + grid[5] == "XXX") ||
       (grid[6] + grid[7] + grid[8] == "XXX") ||
       (grid[2] + grid[4] + grid[6] == "XXX") ||
-      (grid[0] + grid[4] + grid[8] == "XXX")) {
+      (grid[0] + grid[4] + grid[8] == "XXX") ||
+      (grid[0] + grid[3] + grid[6] == "XXX") ||
+      (grid[1] + grid[4] + grid[7] == "XXX") ||
+      (grid[2] + grid[5] + grid[8] == "XXX")) {
       document.querySelector("p").replaceChild(document.createTextNode(`Player 1 Wins`), document.querySelector('p').firstChild);
 
     } else if ((grid[0] + grid[1] + grid[2] == "OOO") ||
       (grid[3] + grid[4] + grid[5] == "OOO") ||
       (grid[6] + grid[7] + grid[8] == "OOO") ||
       (grid[2] + grid[4] + grid[6] == "OOO") ||
-      (grid[0] + grid[4] + grid[8] == "OOO")) {
+      (grid[0] + grid[4] + grid[8] == "OOO") ||
+      (grid[0] + grid[3] + grid[6] == "OOO") ||
+      (grid[1] + grid[4] + grid[7] == "OOO") ||
+      (grid[2] + grid[5] + grid[8] == "OOO")) {
       document.querySelector("p").replaceChild(document.createTextNode(`Player 2 Wins`), document.querySelector('p').firstChild);
     }
   }
