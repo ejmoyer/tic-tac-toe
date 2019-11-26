@@ -20,6 +20,13 @@ for (let div in divs) {
 }
   divs[div].removeEventListener("click", event => {
 }
+                                
+                                
+                                
+                                }
+if (grid [1, 2, 3 | 1, 4, 7 | 1, 5, 9 | 2, 5, 8 | 3, 6, 9 | 3, 5, 7 | 4, 5, 6 | 7, 8, 9] === "") {
+  appendChild(document.querySelector("p")createTextNode("Winner"))
+}
 //make sure the grid works
 
 // as a player i want to click a square to place a marker
