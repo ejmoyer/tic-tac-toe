@@ -15,9 +15,11 @@ function randomPlayer(playerNumber) {
 let counter = randomPlayer(1);
 window.addEventListener("load", event => {
   if (counter % 2 != 0){
-  document.querySelector('p').replaceChild(document.createTextNode(`Player 2's Turn`), document.querySelector('p').firstChild)
+  document.querySelector('p').replaceChild(document.createTextNode(`Player 2's Turn`), document.querySelector('p').firstChild);
+  document.querySelector('p').style.color = "blue";
 } else {
-    document.querySelector('p').replaceChild(document.createTextNode(`Player 1's Turn`), document.querySelector('p').firstChild)
+    document.querySelector('p').replaceChild(document.createTextNode(`Player 1's Turn`), document.querySelector('p').firstChild);
+    document.querySelector('p').style.color = "red";
 }
 });
 
@@ -26,8 +28,10 @@ for (let div in divs) {
   const symbolFunc = event => {
     if (counter % 2 == 0) {
       divs[div].replaceChild(document.createTextNode(players[0]), divs[div].firstChild);
+      divs[div].style.color = "red";
     } else {
       divs[div].replaceChild(document.createTextNode(players[1]), divs[div].firstChild);
+      divs[div].style.color = "blue";
     }
     counter++;
     divs[div].removeEventListener("click", symbolFunc);
@@ -35,9 +39,11 @@ for (let div in divs) {
 
   divs[div].addEventListener("click", event => {
     if (counter % 2 != 0) {
-      document.querySelector("p").replaceChild(document.createTextNode(`Player 1's Turn`), document.querySelector('p').firstChild)
+      document.querySelector("p").replaceChild(document.createTextNode(`Player 1's Turn`), document.querySelector('p').firstChild);
+      document.querySelector('p').style.color = "red";
   } else {
-      document.querySelector("p").replaceChild(document.createTextNode(`Player 2's Turn`), document.querySelector('p').firstChild)
+      document.querySelector("p").replaceChild(document.createTextNode(`Player 2's Turn`), document.querySelector('p').firstChild);
+      document.querySelector('p').style.color = "blue";
   }
   })
   divs[div].addEventListener("click", symbolFunc);
