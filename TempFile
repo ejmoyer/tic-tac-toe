@@ -1,0 +1,56 @@
+let grid = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let turn = [0, 1];
+const players = ['X', 'O'];
+
+let divs = Array.from(document.querySelectorAll("div"))
+let counter = 0;
+for (let div in divs) {
+  divs[div].appendChild(document.createTextNode(""))
+  divs[div].addEventListener("click", event => {
+    counter++;
+    if (counter % 0) {
+        divs[div].replaceChild(document.createTextNode(players[0]), divs[div].firstChild);
+}
+    else {
+              divs[div].replaceChild(document.createTextNode(players[1]), divs[div].firstChild);
+        }
+
+})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//TRY #2
+
+let grid = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let turn = [0, 1];
+const players = ['X', 'O'];
+
+// as a player i want to see a grid so i can know the state of the game
+// make the grid and the divs reference one another
+let divs = Array.from(document.querySelectorAll("div"))
+let counter = 0;
+for (let div in divs) {
+  divs[div].appendChild(document.createTextNode(""))
+  divs[div].addEventListener("click", event => {
+    // put an x or O with .replaceChild
+    counter++;
+    let randomStart = setTimeout(() => {
+      divs[div].appendChild(document.createTextNode("X"));
+    }, 500);
+
+    if (Math.random() < 0.5) { // 50% chance
+      divs[div].appendChild(document.createTextNode("O"));
+      clearTimeout(randomStart);
+    }
+  })
+}
