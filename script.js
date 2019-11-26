@@ -30,12 +30,15 @@ for (let div in divs) {
   const symbolFunc = event => {
     if (counter % 2 == 0) {
       divs[div].replaceChild(document.createTextNode(players[0]), divs[div].firstChild);
+      grid[div] = players[0];
       divs[div].style.color = "red";
       divs[div].style.fontSize = "xx-large";
     } else {
       divs[div].replaceChild(document.createTextNode(players[1]), divs[div].firstChild);
+      grid[div] = players[1];
       divs[div].style.color = "blue";
       divs[div].style.fontSize = "xx-large";
+
     }
     counter++;
     divs[div].removeEventListener("click", symbolFunc);
