@@ -17,11 +17,7 @@ for (let div in divs) {
         }
         divs[div].removeEventListener("click", symbolFunc);
 }
-<<<<<<< HEAD
   divs[div].addEventListener("click", symbolFunc);
-=======
-  divs[div].removeEventListener("click", event => {
->>>>>>> 79143533dd9c1d0ea3b7c2a9cbec814e52134ce3
 }
 
 
