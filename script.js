@@ -17,9 +17,11 @@ window.addEventListener("load", event => {
   if (counter % 2 != 0){
   document.querySelector('p').replaceChild(document.createTextNode(`Player 2's Turn`), document.querySelector('p').firstChild);
   document.querySelector('p').style.color = "blue";
+  document.querySelector('p').style.fontSize = "xx-large";
 } else {
     document.querySelector('p').replaceChild(document.createTextNode(`Player 1's Turn`), document.querySelector('p').firstChild);
     document.querySelector('p').style.color = "red";
+    document.querySelector('p').style.fontSize = "xx-large";
 }
 });
 
@@ -29,9 +31,11 @@ for (let div in divs) {
     if (counter % 2 == 0) {
       divs[div].replaceChild(document.createTextNode(players[0]), divs[div].firstChild);
       divs[div].style.color = "red";
+      divs[div].style.fontSize = "xx-large";
     } else {
       divs[div].replaceChild(document.createTextNode(players[1]), divs[div].firstChild);
       divs[div].style.color = "blue";
+      divs[div].style.fontSize = "xx-large";
     }
     counter++;
     divs[div].removeEventListener("click", symbolFunc);
@@ -41,9 +45,11 @@ for (let div in divs) {
     if (counter % 2 != 0) {
       document.querySelector("p").replaceChild(document.createTextNode(`Player 1's Turn`), document.querySelector('p').firstChild);
       document.querySelector('p').style.color = "red";
+      document.querySelector('p').style.fontSize = "xx-large";
   } else {
       document.querySelector("p").replaceChild(document.createTextNode(`Player 2's Turn`), document.querySelector('p').firstChild);
       document.querySelector('p').style.color = "blue";
+      document.querySelector('p').style.fontSize = "xx-large";
   }
   })
   divs[div].addEventListener("click", symbolFunc);
